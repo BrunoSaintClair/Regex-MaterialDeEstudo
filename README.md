@@ -12,6 +12,8 @@ O RegEx serve para identificar padrões de caracteres em textos e ele está pres
 * Extrair toda vez que encontrar o padrão.
 * Achar um padrão e substituir por outro.
 
+Essas aplicações podem ser feitas em um parágrado de texto, um texto estruturado como json e xml, ou em conteúdo de um código.
+
 
 # Exemplo:
 * Encontrar emails em um texto gigante.
@@ -75,6 +77,12 @@ Encontrar nome e sobrenome no formato -> Xxxx Xxxx :
   [A-Z][a-z]+ [A-Z][a-z]+
 ```
 
+* Validação de CPF:
+
+```
+  [0-9]{3}[.][0-9]{3}[.][0-9]{3}[-][0-9]{2}
+```
+
 * Outro exemplos:
 
 Se a string começa com o padrão escolhido, exemplo: telefone:
@@ -87,3 +95,22 @@ Se a string termina com o padrão escolhido, exemplo: telefone:
    \d{2}[-]?\d{5}[-]?\d{4}$ 
 ```
 
+# Substituição de padrão
+
+Irei usar como exemplo datas.
+Para identificar uma data no formato YYYY-mm-dd:
+```
+  [0-9]{4}[-][0-9]{2}[-][0-9]{2}
+```
+
+Porém, para realizar uma substituição é necessário agrupar os blocos de código, dessa forma:
+```
+  ([0-9]{4})[-]([0-9]{2})[-]([0-9]{2})
+```
+
+Dessa maneira, serão criados "grupos", e para acessá-los, é só utilizar um '$' e em seguida o número referente a ordem do grupo.
+
+Para alterar a ordem para o formato dd-mm-YYYY, seria feito assim:
+```
+  $3/$2/$1
+```
