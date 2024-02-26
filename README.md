@@ -68,4 +68,22 @@ Validando emails pré-definidos(gmail e outlook nesse exemplo):
   \w+[@](gmail|outlook)+[.][a-zA-Z]+([.][a-zA-z]+)?
 ```
 
+* Validação de nome e sobrenome:
+
+Encontrar nome e sobrenome no formato -> Xxxx Xxxx : 
+```
+  [A-Z][a-z]+ [A-Z][a-z]+
+```
+
+* Outro exemplos:
+
+Se a string começa com o padrão escolhido, exemplo: telefone:
+```
+   ^\d{2}[-]?\d{5}[-]?\d{4} 
+```
+
+Se a string termina com o padrão escolhido, exemplo: telefone:
+```
+   \d{2}[-]?\d{5}[-]?\d{4}$ 
+```
 
