@@ -1,5 +1,5 @@
 # Regex-MaterialDeEstudo
-Material simples para quando quiser revisar conceitos ou comandos de Regex. 
+Material simples para quando quiser revisar conceitos de Regex. 
 
 
 # O que é e para que serve?
@@ -18,12 +18,12 @@ Essas aplicações podem ser feitas em um parágrado de texto, um texto estrutur
 # Exemplo:
 * Encontrar emails em um texto gigante.
 * Achar um padrão de data e substituir por outro.
-* Validar se CPF ou número telefonico estão no formato correto.
+* Validar se CPF ou número telefônico estão no formato correto.
 
 
 # Tabela
 
-* . = qualquer caracter.
+* . = qualquer caractere.
 *  \. = busca um ponto
 * \w \d \s = palavra(alfanumérico), dígito(0 a 9) e espaço em branco.
 * \W \D \S = não é um alfanumérico, não é um dígito de 1 a 9, não é um espaço em branco.
@@ -97,7 +97,7 @@ Se a string termina com o padrão escolhido, exemplo: telefone:
    \d{2}[-]?\d{5}[-]?\d{4}$ 
 ```
 
-Do 'e' pegar qualquer coisa até o 'l' na string Jose Silva:
+Do 'e' pegar qualquer coisa até o 'l' numa string:
 ```
   e.*l
 ```
