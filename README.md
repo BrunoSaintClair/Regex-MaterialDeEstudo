@@ -24,7 +24,9 @@ Essas aplicações podem ser feitas em um parágrado de texto, um texto estrutur
 # Tabela
 
 * . = qualquer caracter.
-* \w \d \s = palavra, dígito e espaço em branco.
+* \. = busca um ponto
+* \w \d \s = palavra(alfanumérico), dígito(0 a 9) e espaço em branco.
+* \W \D \S = não é um alfanumérico, não é um dígito de 1 a 9, não é um espaço em branco.
 * [abc] = qualquer um entre 'a', 'b' ou 'c'.
 * [^abc] = qualquer um que não seja 'a', 'b' ou 'c'.
 * \t = tab.
@@ -114,3 +116,22 @@ Para alterar a ordem para o formato dd-mm-YYYY, seria feito assim:
 ```
   $3/$2/$1
 ```
+
+
+# RegEx dentro da IDE
+
+```
+  import re
+```
+
+## Funções
+
+* .compile('string')  -> define padrão.
+  
+* .fullmatch('string1','string2')  -> retorna objeto do tipo 're' se a primeira string for igual a segunda.
+  
+* .search('string1','string2')  -> retorna objeto do tipo 're' se a primeira string estiver presente em algum lugar da segunda. Só retorna a primeira vez que isso acontecer.
+
+*  .findall('string1','string2')  -> retorna objeto do tipo 're' se a primeira string estiver presente em algum lugar da segunda. Retorna todas as vezes que isso acontecer.
+
+  
