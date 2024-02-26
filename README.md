@@ -24,7 +24,7 @@ Essas aplicações podem ser feitas em um parágrado de texto, um texto estrutur
 # Tabela
 
 * . = qualquer caracter.
-* \. = busca um ponto
+*  \. = busca um ponto
 * \w \d \s = palavra(alfanumérico), dígito(0 a 9) e espaço em branco.
 * \W \D \S = não é um alfanumérico, não é um dígito de 1 a 9, não é um espaço em branco.
 * [abc] = qualquer um entre 'a', 'b' ou 'c'.
@@ -97,6 +97,17 @@ Se a string termina com o padrão escolhido, exemplo: telefone:
    \d{2}[-]?\d{5}[-]?\d{4}$ 
 ```
 
+Do 'e' pegar qualquer coisa até o 'l' na string Jose Silva:
+```
+  e.*l
+```
+
+Do 'na' até o fim da string:
+```
+  na.*$
+```
+
+
 # Substituição de padrão
 
 Irei usar como exemplo datas.
@@ -135,3 +146,40 @@ Para alterar a ordem para o formato dd-mm-YYYY, seria feito assim:
 *  .findall('string1','string2')  -> retorna objeto do tipo 're' se a primeira string estiver presente em algum lugar da segunda. Retorna todas as vezes que isso acontecer.
 
   
+## Exemplos mais complexos:
+
+Pegar telefone com os seguintes números a disposição:
+
+  * 81 91234 1234
+  * 81 91234-1234
+  * 81 912345678
+  * 81912345678
+  * (81) 91234 1234
+  * (81)912345678
+  * 123.456.789-32
+
+```
+  \(?\d{2}.*9\d{4}[\s\-]?\d{4}
+```
+
+Validar nome:
+
+  * Mr. Borba
+  * Mr Silva
+  * Ms Alves
+  * Mrs. Farias
+
+```
+  ^M(rs|r|s)\.?\s[A-Z][a-z]+
+```
+
+Validar Url's:
+
+* https://www.google.com
+* http://youtube.com
+* http://gov.br
+
+```
+  https?:\/\/(www)?\.?.*\.(com|br)
+```
+
