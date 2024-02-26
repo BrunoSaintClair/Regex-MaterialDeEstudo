@@ -1,6 +1,7 @@
 # Regex-MaterialDeEstudo
 Material simples para quando quiser revisar conceitos de Regex. 
 
+É possível praticar regex no site: https://regex101.com/
 
 # O que é e para que serve?
 
