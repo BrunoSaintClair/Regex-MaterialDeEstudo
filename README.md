@@ -180,6 +180,6 @@ Validar Url's:
 * http://gov.br
 
 ```
-  https?:\/\/(www)?\.?.*\.(com|br)
+  https?:\/\/[www]?\.?.*\.(com|br)
 ```
 
