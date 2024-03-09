@@ -25,7 +25,7 @@ Essas aplicações podem ser feitas em um parágrado de texto, um texto estrutur
 # Tabela
 
 * . = qualquer caractere.
-* Para busca caracteres especiais, exemplo um ponto, é necessário usar uma contra-barra (\) antes do caractere.
+* Para busca de caracteres especiais, exemplo: um ponto, é necessário usar uma contrabarra antes do caractere.
 * \w \d \s = palavra(alfanumérico), dígito(0 a 9) e espaço em branco.
 * \W \D \S = não é um alfanumérico, não é um dígito de 1 a 9, não é um espaço em branco.
 * [abc] = qualquer um entre 'a', 'b' ou 'c'.
